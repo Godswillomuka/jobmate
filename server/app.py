@@ -7,6 +7,7 @@ import models
 from extensions import db, migrate
 from routes.auth import auth
 from routes.jobs import jobs
+from routes.applications import applications
 
 load_dotenv()
 
@@ -17,6 +18,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.register_blueprint(auth, url_prefix="/auth")
 app.register_blueprint(jobs, url_prefix="/jobs")
+app.register_blueprint(applications, url_prefix="/applications")
 
 # INIT EXTENSIONS
 db.init_app(app)
