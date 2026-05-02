@@ -5,6 +5,7 @@ import os
 import models
 
 from extensions import db, migrate
+from routes.auth import auth
 
 load_dotenv()
 
@@ -13,6 +14,7 @@ CORS(app)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.register_blueprint(auth, url_prefix="/auth")
 
 # INIT EXTENSIONS
 db.init_app(app)
