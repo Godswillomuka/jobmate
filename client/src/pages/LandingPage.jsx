@@ -13,17 +13,22 @@ export default function LandingPage() {
           <img 
             src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&q=80" 
             alt="Team collaboration" 
-            className="hero-image"
+            className="hero-image" 
           />
           <div className="hero-overlay"></div>
         </div>
+        
         <div className="container">
           <div className="hero-content">
+            {/* Hero Title */}
             <h1 className="hero-title">
-              Find Your Dream Job or <span className="highlight">Hire Top Talent</span>
+              Post Any Job.<br />
+              <span className="highlight">Get Bids. Hire Talent.</span>
             </h1>
+            
+            {/* Hero Subtitle */}
             <p className="hero-subtitle">
-              Connect with thousands of opportunities. Whether you're looking for your next career move or seeking skilled professionals, JobMate makes it simple.
+              From 300 KSH errands to global contracts — JobMate connects people who need help with skilled talent ready to deliver. Post in seconds, compare bids, chat directly, pay securely.
             </p>
             
             {/* Search Bar */}
@@ -35,8 +40,8 @@ export default function LandingPage() {
                 </select>
                 <input 
                   type="text" 
-                  placeholder="Search by job title, skills, or company..."
-                  className="search-input"
+                  placeholder="e.g., house help, web developer, courier, accountant..." 
+                  className="search-input" 
                 />
                 <button className="search-btn">
                   <svg viewBox="0 0 24 24" width="22" height="22">
@@ -47,37 +52,44 @@ export default function LandingPage() {
               </div>
               <div className="search-tags">
                 <span>Popular:</span>
-                <button className="tag">Web Development</button>
-                <button className="tag">Design</button>
-                <button className="tag">Marketing</button>
-                <button className="tag">Writing</button>
+                <button className="tag">House Help</button>
+                <button className="tag">Courier</button>
+                <button className="tag">Web Dev</button>
+                <button className="tag">Plumbing</button>
               </div>
             </div>
 
+            {/* Stats Row - Clean horizontal layout */}
             <div className="hero-stats">
-              <div className="stat">
-                <div className="stat-number">10,000+</div>
-                <div className="stat-label">Active Jobs</div>
+              <div className="stat-item">
+                <span className="stat-value">50,000+</span>
+                <span className="stat-text">Active Talents</span>
               </div>
               <div className="stat-divider"></div>
-              <div className="stat">
-                <div className="stat-number">50,000+</div>
-                <div className="stat-label">Talented Professionals</div>
+              <div className="stat-item">
+                <span className="stat-value">12,000+</span>
+                <span className="stat-text">Jobs Posted Weekly</span>
               </div>
               <div className="stat-divider"></div>
-              <div className="stat">
-                <div className="stat-number">5,000+</div>
-                <div className="stat-label">Happy Clients</div>
+              <div className="stat-item">
+                <span className="stat-value">300 KSH</span>
+                <span className="stat-text">Minimum Gig Value</span>
               </div>
+            </div>
+
+            {/* CTA Buttons - Positioned cleanly below stats */}
+            <div className="hero-cta">
+              <button className="btn btn-primary">Post a Job — It's Free</button>
+              <button className="btn btn-secondary">Find Work & Bid</button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trusted By Section */}
+      {/* Trusted By */}
       <section className="trusted-by">
         <div className="container">
-          <p className="trusted-label">Trusted by leading companies worldwide</p>
+          <p className="trusted-label">Trusted by individuals & businesses</p>
           <div className="company-logos">
             <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" />
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" />
@@ -93,71 +105,69 @@ export default function LandingPage() {
         <div className="container">
           <div className="section-header">
             <span className="section-tag">How It Works</span>
-            <h2 className="section-title">Get Started in Three Simple Steps</h2>
-            <p className="section-subtitle">Your path to success starts here</p>
+            <h2 className="section-title">Post. Bid. Hire. Get Paid.</h2>
+            <p className="section-subtitle">Simple, transparent, and built for everyone</p>
           </div>
-          
           <div className="steps-grid">
             <div className="step-card">
               <div className="step-image">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Create Profile" />
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Post Job" />
               </div>
               <div className="step-number">01</div>
-              <h3>Create Your Profile</h3>
-              <p>Sign up and build your professional profile showcasing your skills, experience, and portfolio.</p>
+              <h3>Post Your Job</h3>
+              <p>Describe what you need, set your budget (even 300 KSH), and choose your timeline. Takes less than 2 minutes.</p>
               <ul className="step-features">
-                <li>Free to join</li>
-                <li>Quick setup</li>
-                <li>Verified badges</li>
+                <li>Free to post</li>
+                <li>Flexible budgets</li>
+                <li>Instant visibility</li>
               </ul>
             </div>
             <div className="step-card">
               <div className="step-image">
-                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80" alt="Search & Apply" />
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80" alt="Get Bids" />
               </div>
               <div className="step-number">02</div>
-              <h3>Search & Apply</h3>
-              <p>Browse thousands of jobs or post your project to find the perfect match using our smart filters.</p>
+              <h3>Talent Bids & Chats</h3>
+              <p>Skilled workers apply with their rates and portfolio. Chat directly, negotiate terms, and pick your perfect match.</p>
               <ul className="step-features">
-                <li>AI-powered matching</li>
-                <li>Advanced filters</li>
-                <li>Instant notifications</li>
+                <li>Compare bids side-by-side</li>
+                <li>Chat before hiring</li>
+                <li>Verified profiles</li>
               </ul>
             </div>
             <div className="step-card">
               <div className="step-image">
-                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Get Hired" />
+                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Secure Payment" />
               </div>
               <div className="step-number">03</div>
-              <h3>Get Hired</h3>
-              <p>Connect with employers or clients, negotiate terms, and start working on exciting projects.</p>
+              <h3>Secure & Get Paid</h3>
+              <p>Pay securely via M-Pesa, card, or bank transfer. Funds are held in escrow until you're satisfied. Everyone wins.</p>
               <ul className="step-features">
-                <li>Secure payments</li>
-                <li>24/7 support</li>
-                <li>Long-term opportunities</li>
+                <li>Escrow protection</li>
+                <li>Multiple payment options</li>
+                <li>Dispute resolution</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features */}
       <section className="features">
         <div className="container">
           <div className="features-layout">
             <div className="features-content">
-              <span className="section-tag">Why Choose Us</span>
-              <h2 className="section-title">The Platform That Puts You First</h2>
-              <p className="section-subtitle">We've built JobMate with cutting-edge technology and user experience in mind.</p>
-              
+              <span className="section-tag">Why JobMate</span>
+              <h2 className="section-title">Built for Trust, Speed & Fair Pay</h2>
+              <p className="section-subtitle">We removed the middlemen, fixed payment delays, and made hiring accessible to everyone — from homeowners to startups.</p>
               <div className="features-list">
                 <div className="feature-item">
                   <div className="feature-icon">
                     <svg viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                   </div>
                   <div className="feature-text">
-                    <h4>Smart Matching</h4>
-                    <p>Our AI-powered system connects you with the most relevant opportunities based on your skills and preferences.</p>
+                    <h4>Open Bidding System</h4>
+                    <p>Talent competes fairly. You compare rates, reviews, and portfolios before hiring — no guesswork.</p>
                   </div>
                 </div>
                 <div className="feature-item">
@@ -166,7 +176,7 @@ export default function LandingPage() {
                   </div>
                   <div className="feature-text">
                     <h4>Secure Payments</h4>
-                    <p>Protected transactions with escrow protection ensure you get paid on time, every time.</p>
+                    <p>Funds held in escrow until job completion. Pay via M-Pesa, card, or bank — no more "I'll pay later".</p>
                   </div>
                 </div>
                 <div className="feature-item">
@@ -174,72 +184,71 @@ export default function LandingPage() {
                     <svg viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
                   </div>
                   <div className="feature-text">
-                    <h4>Fast Hiring</h4>
-                    <p>Find your perfect match in days, not weeks with our streamlined hiring process.</p>
+                    <h4>24/7 Local Support</h4>
+                    <p>Real humans ready to help via WhatsApp, call, or chat. We're here when you need us.</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="features-image">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team working together" />
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team working" />
               <div className="features-stats-card">
-                <div className="stats-card-number">98%</div>
-                <div className="stats-card-label">Client Satisfaction Rate</div>
+                <div className="stats-card-number">96%</div>
+                <div className="stats-card-label">Jobs Completed On Time</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Categories Section */}
+      {/* Categories */}
       <section className="categories">
         <div className="container">
           <div className="section-header">
             <span className="section-tag">Browse Categories</span>
-            <h2 className="section-title">Explore Top Job Categories</h2>
+            <h2 className="section-title">Find Exactly What You Need</h2>
           </div>
-          
           <div className="categories-grid">
             <div className="category-card">
-              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&q=80" alt="Development" />
+              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=80" alt="Home & Cleaning" />
               <div className="category-overlay">
-                <h3>Development</h3>
-                <p>2,450+ jobs</p>
+                <h3>Home & Cleaning</h3>
+                <p>House help, laundry, deep cleaning</p>
               </div>
             </div>
             <div className="category-card">
-              <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&q=80" alt="Design" />
+              <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&q=80" alt="Courier & Errands" />
               <div className="category-overlay">
-                <h3>Design</h3>
-                <p>1,890+ jobs</p>
+                <h3>Courier & Errands</h3>
+                <p>Delivery, pickup, shopping, queuing</p>
               </div>
             </div>
             <div className="category-card">
-              <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=400&q=80" alt="Marketing" />
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80" alt="Skilled Trades" />
               <div className="category-overlay">
-                <h3>Marketing</h3>
-                <p>1,320+ jobs</p>
+                <h3>Skilled Trades</h3>
+                <p>Plumbing, electrical, carpentry</p>
               </div>
             </div>
             <div className="category-card">
-              <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&q=80" alt="Writing" />
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80" alt="Tech & Digital" />
               <div className="category-overlay">
-                <h3>Writing</h3>
-                <p>980+ jobs</p>
+                <h3>Tech & Digital</h3>
+                <p>Web dev, design, social media</p>
               </div>
             </div>
             <div className="category-card">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80" alt="Data Science" />
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=80" alt="Finance & Admin" />
               <div className="category-overlay">
-                <h3>Data Science</h3>
-                <p>756+ jobs</p>
+                <h3>Finance & Admin</h3>
+                <p>Bookkeeping, tax, virtual assistant</p>
               </div>
             </div>
             <div className="category-card">
-              <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&q=80" alt="Business" />
+              <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&q=80" alt="Events & Hospitality" />
               <div className="category-overlay">
-                <h3>Business</h3>
-                <p>1,240+ jobs</p>
+                <h3>Events & Hospitality</h3>
+                <p>Catering, ushers, MC, setup</p>
               </div>
             </div>
           </div>
@@ -250,47 +259,46 @@ export default function LandingPage() {
       <section className="testimonials">
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">Testimonials</span>
-            <h2 className="section-title">What Our Users Say</h2>
+            <span className="section-tag">Real Stories</span>
+            <h2 className="section-title">Hear From People Like You</h2>
           </div>
-          
           <div className="testimonials-grid">
             <div className="testimonial-card">
               <div className="testimonial-content">
                 <div className="testimonial-rating">★★★★★</div>
-                <p>"JobMate helped me land my dream job within 2 weeks. The platform is intuitive and the matching system is incredibly accurate."</p>
+                <p>"I post cleaning jobs every week. I set my budget at 500 KSH, get 3 bids in minutes, and always get reliable help. JobMate is a lifesaver."</p>
               </div>
               <div className="testimonial-author">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sarah Johnson" />
+                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&q=80" alt="Wanjiku M." />
                 <div className="author-info">
-                  <h4>Sarah Johnson</h4>
-                  <p>Software Engineer at Google</p>
+                  <h4>Wanjiku M.</h4>
+                  <p>Homeowner, Nairobi</p>
                 </div>
               </div>
             </div>
             <div className="testimonial-card">
               <div className="testimonial-content">
                 <div className="testimonial-rating">★★★★★</div>
-                <p>"As a hiring manager, I've found top-tier talent on JobMate. The quality of candidates is exceptional and the process is seamless."</p>
+                <p>"As a plumber, I used to wait days for work. Now I bid on jobs daily. Made 45K last month just from weekend gigs. Highly recommend."</p>
               </div>
               <div className="testimonial-author">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Michael Chen" />
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80" alt="Kevin O." />
                 <div className="author-info">
-                  <h4>Michael Chen</h4>
-                  <p>HR Director at Microsoft</p>
+                  <h4>Kevin O.</h4>
+                  <p>Plumber, Kisumu</p>
                 </div>
               </div>
             </div>
             <div className="testimonial-card">
               <div className="testimonial-content">
                 <div className="testimonial-rating">★★★★★</div>
-                <p>"The best platform for freelancers! I've built a successful career through JobMate with consistent high-paying projects."</p>
+                <p>"Hired a web developer for 120K. The escrow system gave me peace of mind. He delivered on time, and I released payment instantly."</p>
               </div>
               <div className="testimonial-author">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Emily Rodriguez" />
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80" alt="Amina K." />
                 <div className="author-info">
-                  <h4>Emily Rodriguez</h4>
-                  <p>Freelance Designer</p>
+                  <h4>Amina K.</h4>
+                  <p>Startup Founder, Mombasa</p>
                 </div>
               </div>
             </div>
@@ -306,11 +314,11 @@ export default function LandingPage() {
         </div>
         <div className="container">
           <div className="cta-content">
-            <h2>Ready to Get Started?</h2>
-            <p>Join thousands of professionals and companies already using JobMate to achieve their goals.</p>
+            <h2>Stop Searching. Start Earning or Getting Help.</h2>
+            <p>Join thousands of people already posting jobs, bidding fairly, and getting paid securely. No hidden fees. No waiting.</p>
             <div className="cta-buttons">
-              <button className="cta-btn primary">Find a Job</button>
-              <button className="cta-btn secondary">Hire Talent</button>
+              <button className="btn btn-primary">Post a Job (Free)</button>
+              <button className="btn btn-secondary">Find Work Now</button>
             </div>
             <div className="cta-trust">
               <div className="trust-item">
@@ -319,11 +327,11 @@ export default function LandingPage() {
               </div>
               <div className="trust-item">
                 <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>No credit card required</span>
+                <span>M-Pesa ready</span>
               </div>
               <div className="trust-item">
                 <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>Cancel anytime</span>
+                <span>Verified talent</span>
               </div>
             </div>
           </div>
