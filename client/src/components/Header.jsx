@@ -1,89 +1,78 @@
+import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
-import React, { useState, useEffect } from "react";
-import logo from "/home/zilla/Desktop/jobmate/client/public/favicon.svg";
+export default function Header() {
+  const [open, setOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const timeoutRef = useRef(null);
 
-const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState("home");
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current);
+    setOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setOpen(false);
+    }, 200);
+  };
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    // Update active link based on URL hash
-    const handleHashChange = () => {
-      const hash = window.location.hash.slice(1) || "home";
-      setActiveLink(hash);
-      setMenuOpen(false); // Close menu when link is clicked
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpen(false);
+      }
     };
 
-    handleHashChange();
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      clearTimeout(timeoutRef.current);
+    };
   }, []);
 
-  const navLinks = [
-    { label: "HOME", id: "home" },
-    { label: "ABOUT", id: "about" },
-    { label: "SERVICES", id: "services" },
-    { label: "PORTFOLIO", id: "portfolio" },
-    { label: "CONTACT", id: "contact" }
-  ];
-
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-
   return (
-    <>
-      <header className={`main-header ${scrolled ? "active" : ""}`}>
-        <div className="container nav-wrapper">
-          <div className="logo-container">
-            <img src={logo} alt="Fintech Print Innovations" />
-          </div>
-          
-          {/* Hamburger Menu Button */}
+    <header className="header">
+      <div className="logo">
+        <Link to="/">job<span>Mate</span></Link>
+      </div>
+
+      <nav className="nav">
+        <div 
+          className="dropdown" 
+          ref={dropdownRef}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <button 
-            className={`hamburger ${menuOpen ? "open" : ""}`}
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
+            className="dropdown-toggle"
+            onClick={() => setOpen(!open)}
+            onFocus={() => setOpen(true)}
+            aria-expanded={open}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            Explore
           </button>
 
-          {/* Navigation */}
-          <nav className={`glass-nav ${menuOpen ? "open" : ""}`}>
-            <ul className="nav-list">
-              {navLinks.map((link) => (
-                <li key={link.id}>
-                  <a
-                    href={`#${link.id}`}
-                    className={activeLink === link.id ? "active" : ""}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <button 
-              className="sign-in-btn"
-              onClick={() => setModalOpen(true)}
-            >
-              SIGN IN
-            </button>
-          </nav>
+          {open && (
+            <div className="dropdown-menu">
+              <Link to="/about" onClick={() => setOpen(false)}>About Us</Link>
+              <Link to="/how-it-works" onClick={() => setOpen(false)}>How It Works</Link>
+              <Link to="/services" onClick={() => setOpen(false)}>Services</Link>
+              <Link to="/blog" onClick={() => setOpen(false)}>Blog</Link>
+            </div>
+          )}
         </div>
-      </header>
 
-      {/* Auth Modal Component */}
-      <AuthModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
-    </>
+        <Link to="/jobs" className="nav-link">Browse Jobs</Link>
+        <Link to="/seller" className="nav-link">Become a Seller</Link>
+        <Link to="/contact" className="nav-link">Contact Us</Link>
+      </nav>
+
+      <div className="auth-buttons">
+        <Link to="/login" className="nav-link">Sign In</Link>
+        <Link to="/register" className="signup-btn">Sign Up</Link>
+      </div>
+    </header>
   );
-};
-
-export default Header;
+}
