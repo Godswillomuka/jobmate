@@ -1,0 +1,60 @@
+/* components/Rating.css */
+:root {
+  --rating-color: #fbbf24;
+  --rating-empty: #d1d5db;
+  --text-main: #1a1a1a;
+  --text-muted: #6b7280;
+}
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  color: var(--rating-empty);
+}
+
+.star {
+  line-height: 1;
+  transition: color 0.1s ease;
+}
+
+.star.filled {
+  color: var(--rating-color);
+}
+
+.star.half {
+  position: relative;
+  color: var(--rating-empty);
+}
+
+.star.half::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: var(--rating-color);
+}
+
+/* Sizes */
+.star.sm { font-size: 0.875rem; }
+.star.md { font-size: 1rem; }
+.star.lg { font-size: 1.25rem; }
+.star.xl { font-size: 1.5rem; }
+
+.rating-value {
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.rating-count {
+  color: var(--text-muted);
+  font-weight: 400;
+  font-size: 0.875rem;
+}
