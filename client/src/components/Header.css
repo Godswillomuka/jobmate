@@ -1,0 +1,145 @@
+/* =========================
+   HEADER CONTAINER
+========================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #222;
+}
+
+.logo span {
+  color: #c0392b; /* red accent */
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #c0392b;
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+.dropdown {
+  position: relative;
+}
+
+/* Button version of nav link */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  padding: 0;
+}
+
+.dropdown-toggle:hover {
+  color: #c0392b;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 180px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Dropdown Items */
+.dropdown-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #f8f8f8;
+  color: #c0392b;
+}
+
+/* =========================
+   AUTH BUTTONS
+========================= */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Sign In */
+.auth-buttons .nav-link {
+  font-size: 14px;
+}
+
+/* Sign Up Button */
+.signup-btn {
+  background: #c0392b;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.signup-btn:hover {
+  background: #a93226;
+}
+
+/* =========================
+   RESPONSIVE (BASIC)
+========================= */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .nav {
+    display: none; /* later we can add mobile menu */
+  }
+
+  .auth-buttons {
+    gap: 8px;
+  }
+}
