@@ -1,9 +1,41 @@
-/* Using global variables from index.css */
+/* ===== CSS VARIABLES FALLBACK ===== */
+:root {
+  --primary: #e63946;
+  --primary-hover: #d90429;
+  --text-main: #1a1a1a;
+  --text-muted: #6b7280;
+  --bg-light: #f8f9fa;
+  --border: #e5e7eb;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg: 0 20px 40px rgba(0,0,0,0.15);
+  --radius: 12px;
+  --radius-lg: 16px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+/* ===== GLOBAL RESET ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-.landing-page {
+/* ===== CONTAINER CLASS ===== */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 1024px) { .container { padding: 0 32px; } }
+@media (max-width: 768px) { .container { padding: 0 24px; } }
+@media (max-width: 480px) { .container { padding: 0 16px; } }
+
+/* ===== LAYOUT WRAPPER ===== */
+.landing-page-wrapper {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-page {
+  flex: 1;
   font-family: inherit;
 }
 
@@ -41,7 +73,6 @@
   color: #fff;
 }
 
-/* Hero Title - Fixed alignment */
 .hero-title {
   font-size: 3.5rem;
   font-weight: 800;
@@ -68,7 +99,6 @@
   border-radius: 4px;
 }
 
-/* Hero Subtitle */
 .hero-subtitle {
   font-size: 1.25rem;
   line-height: 1.6;
@@ -178,7 +208,7 @@
   color: var(--primary);
 }
 
-/* Hero Stats - Clean horizontal row */
+/* Hero Stats */
 .hero-stats {
   display: flex;
   justify-content: center;
@@ -712,8 +742,6 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-  .container { padding: 0 32px; }
-  
   .hero-title { font-size: 2.75rem; }
   
   .features-layout {
@@ -761,14 +789,11 @@
   
   .cta h2 { font-size: 2rem; }
   .cta-buttons { flex-direction: column; }
-  
-  .container { padding: 0 24px; }
 }
 
 @media (max-width: 480px) {
   .hero-title { font-size: 1.875rem; }
   .section-title { font-size: 1.75rem; }
-  .container { padding: 0 16px; }
   
   .company-logos { gap: 28px; }
   .company-logos img { height: 30px; }
