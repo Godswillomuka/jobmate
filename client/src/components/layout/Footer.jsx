@@ -38,6 +38,9 @@ export default function Footer() {
               <ul className="footer-links">
                 <li><Link to="/jobs">Browse Jobs</Link></li>
                 <li><Link to="/how-it-works">How It Works</Link></li>
+                <li><Link to="/career-advice">Career Advice</Link></li>
+                <li><Link to="/resume-builder">Resume Builder</Link></li>
+                <li><Link to="/salary-guide">Salary Guide</Link></li>
               </ul>
             </div>
 
@@ -46,6 +49,10 @@ export default function Footer() {
               <h4>For Employers</h4>
               <ul className="footer-links">
                 <li><Link to="/post-job">Post a Job</Link></li>
+                <li><Link to="/browse-talent">Browse Talent</Link></li>
+                <li><Link to="/pricing">Pricing</Link></li>
+                <li><Link to="/recruiting-solutions">Recruiting Solutions</Link></li>
+                <li><Link to="/enterprise">Enterprise</Link></li>
               </ul>
             </div>
 
@@ -56,6 +63,8 @@ export default function Footer() {
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
                 <li><Link to="/blog">Blog</Link></li>
+                <li><Link to="/press">Press</Link></li>
+                <li><Link to="/careers">Careers</Link></li>
               </ul>
             </div>
 
@@ -63,23 +72,13 @@ export default function Footer() {
             <div className="footer-col">
               <h4>Support</h4>
               <ul className="footer-links">
-                <li><a href="#" onClick={(e) => e.preventDefault()}>Help Center</a></li>
-                <li><a href="#" onClick={(e) => e.preventDefault()}>Terms of Service</a></li>
-                <li><a href="#" onClick={(e) => e.preventDefault()}>Privacy Policy</a></li>
+                <li><Link to="/help">Help Center</Link></li>
+                <li><Link to="/safety">Safety</Link></li>
+                <li><Link to="/terms">Terms of Service</Link></li>
+                <li><Link to="/privacy">Privacy Policy</Link></li>
+                <li><Link to="/cookies">FAQs</Link></li>
               </ul>
             </div>
-          </div>
-        </div>
-
-        {/* Newsletter */}
-        <div className="footer-newsletter">
-          <div className="newsletter-content">
-            <h3>Subscribe to Our Newsletter</h3>
-            <p>Get the latest job market insights, career tips, and exclusive opportunities delivered to your inbox.</p>
-            <form className="newsletter-form">
-              <input type="email" placeholder="Enter your email address" required />
-              <button type="submit" className="newsletter-btn">Subscribe</button>
-            </form>
           </div>
         </div>
 
