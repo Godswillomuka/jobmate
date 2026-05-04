@@ -1,0 +1,15 @@
+.how-it-works-page {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.how-it-works-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.how-it-works-page p {
+  font-size: 1.1rem;
+  color: #666;
+}

@@ -1,11 +1,12 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
 import './LandingPage.css';
 
 export default function LandingPage() {
   return (
-    <div className="landing-page">
+    <>
       <Header />
+      <div className="landing-page">
       
       {/* Hero Section */}
       <section className="hero">
@@ -337,8 +338,8 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
+      <Footer />
+    </>
   );
 }
