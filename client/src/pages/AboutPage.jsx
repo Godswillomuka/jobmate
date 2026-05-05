@@ -37,21 +37,21 @@ export default function AboutPage() {
                 <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80" alt="Community meeting" />
               </div>
               <div className="story-content">
-                <span className="section-tag">Our Story</span>
                 <h2 className="section-title">Why We Started JobMate</h2>
                 <p>
-                  In 2023, we noticed a growing disconnect: thousands of skilled Kenyans struggling to find consistent work, while households and businesses struggled to find reliable help. Traditional platforms charged high fees, ignored cash-based economies, and overlooked informal gigs.
+                  In 2025, we noticed a growing disconnect: thousands of skilled Kenyans struggling to find consistent work, while households and businesses struggled to find reliable help. Traditional platforms charged high fees, ignored cash-based economies, and overlooked informal gigs.
                 </p>
                 <p>
                   We built JobMate to change that. A platform that respects the 300 KSH plumber as much as the 150K web developer. One that integrates M-Pesa, verifies users, and ensures fair pay for everyone.
                 </p>
+                <p>What a success!!!</p>
                 <div className="story-highlights">
                   <div className="highlight-item">
-                    <span className="highlight-number">2023</span>
+                    <span className="highlight-number">2026</span>
                     <span className="highlight-label">Founded in Nairobi</span>
                   </div>
                   <div className="highlight-item">
-                    <span className="highlight-number">50K+</span>
+                    <span className="highlight-number">500</span>
                     <span className="highlight-label">Users Onboarded</span>
                   </div>
                   <div className="highlight-item">
@@ -90,7 +90,6 @@ export default function AboutPage() {
         <section className="about-values">
           <div className="container">
             <div className="section-header">
-              <span className="section-tag">What Drives Us</span>
               <h2 className="section-title">Our Core Values</h2>
               <p className="section-subtitle">The principles that guide every decision we make</p>
             </div>
@@ -132,11 +131,11 @@ export default function AboutPage() {
           <div className="container">
             <div className="impact-grid">
               <div className="impact-stat">
-                <span className="impact-number">125K+</span>
+                <span className="impact-number">500</span>
                 <span className="impact-label">Jobs Completed</span>
               </div>
               <div className="impact-stat">
-                <span className="impact-number">KSH 450M</span>
+                <span className="impact-number">KSH 100k</span>
                 <span className="impact-label">Paid to Workers</span>
               </div>
               <div className="impact-stat">
@@ -155,7 +154,6 @@ export default function AboutPage() {
         <section className="about-team">
           <div className="container">
             <div className="section-header">
-              <span className="section-tag">Our Team</span>
               <h2 className="section-title">Meet the People Behind JobMate</h2>
               <p className="section-subtitle">A diverse team passionate about solving Africa's employment challenges</p>
             </div>
