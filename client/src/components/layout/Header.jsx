@@ -112,6 +112,7 @@ export default function Header() {
 
             <Link to="/jobs" className="nav-link">Browse Jobs</Link>
             <Link to="/seller" className="nav-link">Become a Seller</Link>
+            <Link to="/prices" className="nav-link">Pricing</Link>
             <Link to="/contact" className="nav-link">Contact</Link>
           </nav>
 

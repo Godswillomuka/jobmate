@@ -15,6 +15,7 @@ import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
 import HowItWorksPage from './pages/HowItWorksPage';
 import ServicesPage from './pages/ServicesPage';
+import PricingPage from './pages/PricingPage';
 import AdminOverview from './pages/dashboards/admin/AdminOverview';
 import WorkerOverview from './pages/dashboards/worker/WorkerOverview';
 import SellerOverview from './pages/dashboards/seller/SellerOverview';
@@ -48,6 +49,7 @@ function App() {
           <Route path="/how-it-works" element={<HowItWorksPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/prices" element={<PricingPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
